@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
-  <title>给方宝宝的小礼物🎁</title>
+  <title>Món quà nhỏ cho Em</title>
   <style>
     body {
       min-height: 100vh;
@@ -77,48 +77,47 @@
 </head>
 
 <body>
-  <!--礼物-->
+  <!--Quà-->
   <div class="box">
     <img src="gift.jpg" alt="" class="box-img" />
-    <h1>💞方宝宝</h1>
-    <h5>1 Corinthians 3:4-8</h5>
+    <h1>💞 Baby</h1>
+    <h5>Mãi yêu bae💖</h5>
     <p>
-      &emsp;&emsp;哈哈哈哈哈其他的啥都不说了
+      &emsp;&emsp;Hahahahaha đừng nói gì nữa
       <br>
-      &emsp;&emsp;矫情嘿嘿，超级好喜欢你啊 ❗
+      &emsp;&emsp;Đạo đức giả, anh thích em rất nhiều ❗
       <br>
-      &emsp;&emsp;30天说长不长，说短不短，不知道你感觉如何呀😜
+      &emsp;&emsp;30 ngày nói dài không dài, nói ngắn chẳng ngắn, anh không biết em cảm thấy thế nào 😜
       <br>
-      &emsp;&emsp;谢谢你，让我进入了你的世界，HELLO WOLRD
+      &emsp;&emsp;Cảm ơn em đã cho anh bước vào thế giới của em, Yêu em💖
       <br>
-      &emsp;&emsp;也欢迎你来我的世界逛逛，这个小礼物还喜欢嘛hh
+      &emsp;&emsp;em cũng được chào đón đến thăm thế giới của anh, em có còn thích món quà nhỏ này không hh
       <br>
-      &emsp;&emsp;未来，祈求神看顾，在祂的里面，爱是永不止息💗
+      &emsp;&emsp;Trong tương lai, hãy cầu nguyện để được Chúa chăm sóc, trong Ngài, tình yêu thương sẽ không bao giờ ngừng ce
       <br>
-      &emsp;&emsp;我会继续努力，为着眼前的，未来的以及过去的
+      &emsp;&emsp;anh sẽ tiếp tục làm việc chăm chỉ cho hiện tại, tương lai và quá khứ
       <br>
-      &emsp;&emsp;我们一起加油吧↖(^ω^)↗
+      &emsp;&emsp;Cùng nhau cổ vũ nhé ↖ (^ ω ^) ↗
       <br>
-      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2021.03.31
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2021.03.23
       <br>
       <br>
       <br>
-      <!--这里放音乐哦 -->
+      <! - Phát nhạc tại đây ->
       <audio id='audio' src='love.mp3' loop></audio>
-      <button id='status' visible="false" onclick='triggerBgMusic()'>播放按钮</button>
+      <button id='status' visible="false" onclick='triggerBgMusic()'>Nút phát</button>
     </p>
   </div>
 </body>
 <script>
-  //----------背景音乐页面初始化------------  用于解决safari和Chrome自动播放问题 
-  //方案来源于https://blog.csdn.net/joyce_lcy/article/details/79347383?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
-  var audio = document.getElementById('audio');
+ // ---------- Khởi tạo trang nhạc nền ------------ Được sử dụng để giải quyết vấn đề tự động phát của safari và Chrome
+   // Giải pháp đến từ https://blog.csdn.net/joyce_lcy/article/details/79347383?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=&depthource_1-utist_request_riblevantsource=dist_distth_1. none -task-blog-BlogCommendFromMachineLearnPai2-2.control  var audio = document.getElementById('audio');
   if (sessionStorage.bgmusic == 'pause') {
     playBgMusic(false);
   } else {
     playBgMusic(true);
-    //----------处理自动播放------------
-    //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+    // ---------- Xử lý tự động phát ------------
+     // - Tạo trình giám sát trang, đợi trang WeChat tải và kích hoạt phát lại âm thanh
     document.addEventListener('DOMContentLoaded', function () {
       function audioAutoPlay() {
         playBgMusic(true);
@@ -128,14 +127,14 @@
       }
       audioAutoPlay();
     });
-    //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+    // - Tạo màn hình cảm ứng, khi trình duyệt mở trang, chạm vào màn hình để kích hoạt sự kiện và thực hiện phát lại âm thanh
     function audioAutoPlay() {
       playBgMusic(true);
       document.removeEventListener('touchstart', audioAutoPlay);
     }
     document.addEventListener('touchstart', audioAutoPlay);
   }
-  //----------处理页面激活------------
+  // ---------- Quy trình kích hoạt trang ------------
   var hiddenProperty = 'hidden' in document ? 'hidden' :
     'webkitHidden' in document ? 'webkitHidden' :
     'mozHidden' in document ? 'mozHidden' :
@@ -151,7 +150,7 @@
     }
   }
   document.addEventListener(visibilityChangeEvent, onVisibilityChange);
-  //---------背景音乐开关----------
+  // --------- Công tắc nhạc nền ----------
   function triggerBgMusic() {
     if (!sessionStorage.bgmusic || sessionStorage.bgmusic == 'play') {
       playBgMusic(false);
@@ -159,16 +158,16 @@
       playBgMusic(true);
     }
   }
-  //---------音乐播放和暂停----------
+  // --------- Phát nhạc và tạm dừng ----------
   function playBgMusic(val) {
     if (val) {
       audio.play();
       sessionStorage.bgmusic = 'play';
-      document.getElementById('status').innerHTML = 'Music ~停 🈲';
+      document.getElementById('status').innerHTML = 'Music ~ Stop';
     } else {
       audio.pause();
       sessionStorage.bgmusic = 'pause';
-      document.getElementById('status').innerHTML = '音乐 ~走起 🈶';
+      document.getElementById('status').innerHTML = 'Âm nhạc ~ Walk up 🈶';
     }
   }
 </script>
